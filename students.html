@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Alumini Management System</title>
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="vendors/themefy_icon/themify-icons.css" />
+
+    <link rel="stylesheet" href="vendors/swiper_slider/css/swiper.min.css" />
+
+    <link rel="stylesheet" href="vendors/select2/css/select2.min.css" />
+
+    <link rel="stylesheet" href="vendors/niceselect/css/nice-select.css" />
+
+    <link rel="stylesheet" href="vendors/owl_carousel/css/owl.carousel.css" />
+
+    <link rel="stylesheet" href="vendors/gijgo/gijgo.min.css" />
+
+    <link rel="stylesheet" href="vendors/font_awesome/css/all.min.css" />
+    <link rel="stylesheet" href="vendors/tagsinput/tagsinput.css" />
+
+    <link rel="stylesheet" href="vendors/datatable/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="vendors/datatable/css/responsive.dataTables.min.css" />
+    <link rel="stylesheet" href="vendors/datatable/css/buttons.dataTables.min.css" />
+
+    <link rel="stylesheet" href="vendors/text_editor/summernote-bs4.css" />
+
+    <link rel="stylesheet" href="vendors/morris/morris.css">
+
+    <link rel="stylesheet" href="vendors/material_icon/material-icons.css" />
+
+    <link rel="stylesheet" href="css/metisMenu.css">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/colors/default.css" id="colorSkinCSS">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="vendors\font_awesome\css\all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/09a05bb41f.js" crossorigin="anonymous"></script>
+    <style>
+        #alumini_table {
+            display: none;
+        }
+        .image-upload>input {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="crm_body_bg">
+
+    <nav class="sidebar">
+        <div class="logo d-flex justify-content-between">
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+            <div class="sidebar_close_icon d-lg-none">
+                <i class="ti-close"></i>
+            </div>
+        </div>
+        <ul id="sidebar_menu">
+            <li class="">
+                <a href="index.html" aria-expanded="false">
+                    <img src="img/menu-icon/1.svg" alt="">
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="alumini.html" aria-expanded="false">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <span>Alumini</span>
+                </a>
+            </li>
+            <li class="mm-active">
+                <a href="#" aria-expanded="false">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Students</span>
+                </a>
+            </li>
+            <li class="">
+                <a href="department.html" aria-expanded="false">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>Department</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <section class="main_content dashboard_part">
+
+        <div class="container-fluid no-gutters">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <div class="header_iner d-flex justify-content-between align-items-center">
+                        <div class="sidebar_icon d-lg-none">
+                            <i class="ti-menu"></i>
+                        </div>
+                        <div class="serach_field-area">
+                            <div class="main-title">
+                                <h2 class="mb_7">Alumini Management System</h2>
+                            </div>
+                        </div>
+                        <div class="header_right d-flex justify-content-between align-items-center">
+                            <div class="profile_info">
+                                <img src="img/client_img.png" alt="#">
+                                <div class="profile_info_iner">
+                                    <p>Admin </p>
+                                    <h5>Admin name</h5>
+                                    <div class="profile_info_details">
+                                        <a href="profilebox.html">My Profile <i class="ti-user"></i></a>
+                                        <a href="#">Log Out <i class="ti-shift-left"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_content_iner ">
+            <div class="container-fluid p-0">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="single_element">
+                            <div class="quick_activity">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="quick_activity_wrap">
+                                            <div class="single_quick_activity d-flex" onclick="alumini_list()">
+                                                <div class="icon">
+                                                    <img src="img/icon/student.svg" alt="image">
+                                                </div>
+                                                <div class="count_content">
+                                                    <h3><span class="counter">20</span> </h3>
+                                                    <p>Students</p>
+                                                </div>
+                                            </div>
+                                            <div class="image-upload" style="padding-top: 10px;">
+                                                <label for="file-input">
+                                                    <img src="img/Cloudarrow.png" />
+                                                </label>
+                                                <input id="file-input" type="file" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12" id="alumini_table">
+                        <div class="QA_section">
+                            <div class="QA_table mb_30">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Profile Picture</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Phone Number</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Department</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="img/card2.jpg" alt="image"></td>
+                                            <td>Category name</td>
+                                            <td>5846546566</td>
+                                            <td>Lessons@gmail.com</td>
+                                            <td>Department</td>
+                                            <td><a href="#open-modal-editactive" class="status_btn">Active</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer_iner text-center">
+                            <p>2022 Designed and Developed under<i class="ti-heart"></i><a
+                                    href="https://www.nxtgio.com/" target="_blank">
+                                    nxtGIO Technologies LLP</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pop up modal -->
+    <div id="open-modal-editactive" class="modal-window">
+        <div>
+            <a href="#modal-close-edit" title="Close" class="modal-close"> &times;</a>
+            <div class="input-field-pop">
+                <div class="white_box mb_30">
+                    <div class="box_header ">
+                        <div class="main-title">
+                            <h3 class="mb-0">Update Status</h3>
+                        </div>
+                    </div>
+                    <label for="status"></label>
+                    <select name="isactive" id="isactive" class="form-control" required>
+                        <option>Select</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">In Active</option>
+                    </select>
+                </div>
+                <button class="btn btn-outline-primary">Update</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="open-modal-editviewProj" class="modal-window">
+        <div>
+            <a href="#modal-close-edit" title="Close" class="modal-close"> &times;</a>
+            <div class="input-field-pop">
+                <div class="white_box mb_30">
+                    <div class="main-title">
+                        <h3 class="mb-0">Project Details</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><b>Project Title:</b> &nbsp;ABC</li>
+                            <li><b>Achievements:</b> &nbsp;ABC</li>
+                            <li><b>Guide:</b> &nbsp;ABC</li>
+                            <li><b>Year:</b> &nbsp;ABC</li>
+                            <li><b>Department:</b> &nbsp;ABC</li>
+                            <li><b>Project Description:</b> &nbsp;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                                quis, sem.
+                                Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+                                aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet
+                                a, venenatis vitae, justo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="open-modal-editviewJob" class="modal-window">
+        <div>
+            <a href="#modal-close-edit" title="Close" class="modal-close"> &times;</a>
+            <div class="input-field-pop">
+                <div class="white_box mb_30">
+                    <div class="main-title">
+                        <h3 class="mb-0">Job Details</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><b>Working:</b> &nbsp;ABC</li>
+                            <li><b>Experience:</b> &nbsp;ABC</li>
+                            <li><b>Specialization:</b> &nbsp;ABC</li>
+                            <li><b>Company:</b> &nbsp;ABC</li>
+                            <li><b>Vacancy:</b> &nbsp;ABC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End pop up modal -->
+
+    <script>
+        function alumini_list() {
+            var x = document.getElementById("alumini_table");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/metisMenu.js"></script>
+
+    <script src="vendors/count_up/jquery.waypoints.min.js"></script>
+
+    <script src="vendors/chartlist/Chart.min.js"></script>
+
+    <script src="vendors/count_up/jquery.counterup.min.js"></script>
+
+    <script src="vendors/swiper_slider/js/swiper.min.js"></script>
+
+    <script src="vendors/niceselect/js/jquery.nice-select.min.js"></script>
+
+    <script src="vendors/owl_carousel/js/owl.carousel.min.js"></script>
+
+    <script src="vendors/gijgo/gijgo.min.js"></script>
+
+    <script src="vendors/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="vendors/datatable/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatable/js/buttons.flash.min.js"></script>
+    <script src="vendors/datatable/js/jszip.min.js"></script>
+    <script src="vendors/datatable/js/pdfmake.min.js"></script>
+    <script src="vendors/datatable/js/vfs_fonts.js"></script>
+    <script src="vendors/datatable/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatable/js/buttons.print.min.js"></script>
+    <script src="js/chart.min.js"></script>
+
+    <script src="vendors/progressbar/jquery.barfiller.js"></script>
+
+    <script src="vendors/tagsinput/tagsinput.js"></script>
+
+    <script src="vendors/text_editor/summernote-bs4.js"></script>
+    <script src="vendors/apex_chart/apexcharts.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="vendors/apex_chart/bar_active_1.js"></script>
+    <script src="vendors/apex_chart/apex_chart_list.js"></script>
+</body>
+
+</html>
